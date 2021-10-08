@@ -43,10 +43,23 @@ public class MaximunNumber<T> {
 			max = c;
 		printMax(a, b, c, max);
 		return max;
+	}
+
+	/*
+	 * UC3-Find max number among three String value
+	 */
+	public static String testMaxString(String a, String b, String c) {
+		String max = a;// assume x is initially largest
+		if (b.compareTo(max) > 0)
+			max = b;
+		if (c.compareTo(max) > 0)
+			max = c;
+		printMax(a, b, c, max);
+		return max;
 
 	}
 
-	public static <T> void main(String[] args) {
+	public static void main(String[] args) {
 		System.out.println(testMaxInteger(90, 20, 10));
 		System.out.println();
 		System.out.println(testMaxInteger(94, 27, 19));
@@ -59,5 +72,12 @@ public class MaximunNumber<T> {
 		System.out.println();
 		System.out.println(testMaxDouble(8.9, 45.7, 16.3));
 		System.out.println();
+		System.out.println(testMaxString("Apple", "Peach", "Banana"));
+		System.out.println();
+		System.out.println(testMaxString("Mango", "Kiwi", "Apple"));
+		System.out.println();
+		System.out.println(testMaxString("Pinapple", "Orange", "papaya"));
+		System.out.println();
+
 	}
 }
